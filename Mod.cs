@@ -6,6 +6,16 @@ using Game.SceneFlow;
 
 namespace CS2_Clearance
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Runtime.CompilerServices;
+    using System.Xml;
+    using Colossal;
+    using Newtonsoft.Json;
+    using Formatting = Newtonsoft.Json.Formatting;
+
     public class Mod : IMod
     {
         public static ILog log = LogManager.GetLogger($"{nameof(CS2_Clearance)}.{nameof(Mod)}").SetShowsErrorsInUI(false);
@@ -38,6 +48,37 @@ namespace CS2_Clearance
             Settings.RegisterKeyBindings();
 
             updateSystem.UpdateAt<RenderSystem>(SystemUpdatePhase.Rendering);
+
+#if IS_DEBUG && EXPORT_EN_US
+            GenerateLanguageFile();
+#endif
+        }
+
+        /// <summary>
+        /// Generates an en-US localization JSON file from the current localization dictionary.
+        /// Only executed in debug builds with EXPORT_EN_US compiler directive.
+        /// </summary>
+        private void GenerateLanguageFile() {
+            var localeDict = new LocaleEN(Settings).ReadEntries(new List<IDictionaryEntryError>(), new Dictionary<string, int>())
+                                                   .ToDictionary(pair => pair.Key, pair => pair.Value);
+            var str = JsonConvert.SerializeObject(localeDict, Formatting.Indented);
+            try {
+                var path       = GetThisFilePath();
+                var directory  = Path.GetDirectoryName(path);
+                var exportPath = $@"{directory}/lang/en-US.json";
+                File.WriteAllText(exportPath, str);
+            } catch (Exception ex) {
+                log.Error(ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Gets the file path of the calling source file using the CallerFilePath attribute.
+        /// </summary>
+        /// <param name="path">The path provided by the compiler via CallerFilePath attribute.</param>
+        /// <returns>The file path of the calling code.</returns>
+        private static string GetThisFilePath([CallerFilePath] string path = null) {
+            return path;
         }
 
         public void OnDispose()
