@@ -36,7 +36,7 @@
 	<ExternalLink Type="kofi" Url="https://ko-fi.com/lucadevdesign" />
 	<ExternalLink Type="discord" Url="https://discord.gg/C2XQUYHwuV" />
 	<ExternalLink Type="twitch" Url="https://twitch.tv/lucadevdesign" />
-	<ExternalLink Type="crowdin" Url="https://crowdin.com/project/platter-cs2" />
+	<ExternalLink Type="crowdin" Url="https://crowdin.com/project/clearance-cs2" />
 	<!--Supported values Public, Private, Unlisted-->
 	<AccessLevel Value="Unlisted" />
 </Publish>

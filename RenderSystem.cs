@@ -43,7 +43,7 @@ namespace CS2_Clearance {
             base.OnCreate();
 
             m_EdgeQuery = SystemAPI.QueryBuilder()
-                                   .WithAll<Edge>()
+                                   .WithAll<Edge, Curve, Composition>()
                                    .WithNone<Deleted, Hidden>()
                                    .Build();
 
