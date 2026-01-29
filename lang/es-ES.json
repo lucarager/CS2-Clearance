@@ -1,0 +1,18 @@
+{
+  "Options.SECTION[CS2-Clearance.CS2_Clearance.Mod]": "Clearance Helper",
+  "Options.TAB[CS2-Clearance.CS2_Clearance.Mod.Main]": "Main",
+  "Options.GROUP[CS2-Clearance.CS2_Clearance.Mod.Options]": "Sliders",
+  "Options.OPTION[CS2-Clearance.CS2_Clearance.Mod/ToggleOverlay/binding]": "Toggle Clearance Overlay",
+  "Options.OPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.ToggleOverlay]": "Toggle Clearance Overlay",
+  "Options.OPTION_DESCRIPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.ToggleOverlay]": "Shortcut to toggle the rendering of the clearance overlay on or off.",
+  "Options.OPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.RoadHeight]": "Road Height",
+  "Options.OPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.TrainTrackHeight]": "Train Track Height",
+  "Options.OPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.TramTrackHeight]": "Tram Track Height",
+  "Options.OPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.SubwayTrackHeight]": "Subway Track Height",
+  "Options.OPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.WaterwayHeight]": "Waterway Height",
+  "Options.OPTION_DESCRIPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.RoadHeight]": "Sets the height of the overlay above roads. \r\n\r\nCommon heights: \r\n- Truck: 3.8m \r\n- Dump truck: 3.6m \r\n- Average car: 1.5m",
+  "Options.OPTION_DESCRIPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.TrainTrackHeight]": "Sets the height of the overlay above train tracks. \r\n\r\nCommon heights: \r\n- Truck: 3.8m \r\n- Dump truck: 3.6m \r\n- Average car: 1.5m",
+  "Options.OPTION_DESCRIPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.TramTrackHeight]": "Sets the height of the overlay above tram tracks. \r\n\r\nCommon heights: \r\n- Truck: 3.8m \r\n- Dump truck: 3.6m \r\n- Average car: 1.5m",
+  "Options.OPTION_DESCRIPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.SubwayTrackHeight]": "Sets the height of the overlay above subway tracks \r\n\r\nCommon heights: \r\n- Truck: 3.8m \r\n- Dump truck: 3.6m \r\n- Average car: 1.5m",
+  "Options.OPTION_DESCRIPTION[CS2-Clearance.CS2_Clearance.Mod.Setting.WaterwayHeight]": "Sets the height of the overlay above waterways. \r\n\r\nCommon heights: \r\n- Truck: 3.8m \r\n- Dump truck: 3.6m \r\n- Average car: 1.5m"
+}
